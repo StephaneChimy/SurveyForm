@@ -1,3 +1,29 @@
 .fullpage{
-    background-image: url(../images/landpage.png);  
+    background-image: url(../images/landpage.png);
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.fullpage-col{
+    margin: auto;
+}
+header{
+    align-items: flex-end;
+    text-align: center;
+    height: 150px;
+    color: white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);   
+}
+#survey-form{
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(250,250,250, 0.9);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    
 }
