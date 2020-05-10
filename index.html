@@ -10,8 +10,8 @@
         <title>Demande de devis</title>
     </head>
 
-    <div class="row fullpage">
-        <div class="col">
+    <div class="row fullpage container-fluid">
+        <div class="col fullpage-col">
 
             <header class="row">
                 <div class="col">
@@ -22,11 +22,11 @@
 
             <body class="row">
 
-                <form id="survey-form col">
+                <form id="survey-form" class="col">
 
                     <div class="form-group">
-                        <label for="company">Cette prestation est pour:</label>
-                        <select class="form-control" id="company">
+                        <label for="dropdown">Cette prestation est pour:</label>
+                        <select class="form-control" id="dropdown">
                             <option>Une entreprise</option>
                             <option>Un particulier</option>
                         </select>
@@ -54,7 +54,25 @@
 
                         <div class="form-group">
                             <label for="adresse">Quelle est l'adresse du lieu de l’événement?</label>
-                            <input type="text" class="form-control" id="adresse">
+                            <input type="text" class="form-control" id="adresse" placeholder="N°, Rue, Société">
+
+                            <label class="sr-only" for="adresse-complement">Complément d'adresse</label>
+                            <input type="text" class="form-control" id="adresse-complement" placeholder="Complément d'adresse">
+
+                            <div class="form-row">
+
+                                <div class="col">
+                                  <label class="sr-only" for="code-postale">Code postale</label>
+                                  <input type="number" class="form-control" id="code-postale" placeholder="75001">
+                                </div>
+
+                                <div class="col">
+                                    <label class="sr-only" for="ville">Ville</label>
+                                    <input type="text" class="form-control" id="ville" placeholder="Ville">
+                                  </div>
+
+                            </div>
+
                         </div>
 
                         <div class="form-group">
@@ -63,8 +81,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="nbpeople">Nombre de participants?</label>
-                            <input type="number" class="form-control" id="nbpeople">
+                            <label id="number-label" for="number">Nombre de participants?</label>
+                            <input type="number" class="form-control" id="number" required min="1" max="10000" placeholder="10">
                         </div>
 
                        
@@ -153,24 +171,24 @@
                     <section class="info-event-sup">
                         <div class="form-group">
                             <label for="event-description">Description de votre évènement:</label>
-                            <input type="text" class="form-control" id="event-description">
+                            <textarea type="text" class="form-control" rows="5" id="event-description"></textarea>
                         </div>
                     </section>
 
                     <section class="customer-info">
                         <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" class="form-control" id="name">                          
+                            <label id="name-label" for="name">Nom</label>
+                            <input type="text" class="form-control" id="name" placeholder="Votre nom">                          
                         </div>
 
                         <div class="form-group">
                             <label for="surname">Prénom</label>
-                            <input type="text" class="form-control" id="surname">
+                            <input type="text" class="form-control" id="surname" placeholder="Votre prénom">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email">
+                            <label id="email-label" for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="exemple@exem.com" required>
                         </div>
 
                         <div class="form-group">
@@ -180,27 +198,8 @@
 
                     </section>
 
-
-                    <div class="form-group" id="products">
-                        <label for="products"></label>
-                            
-                            <div class="form-check">
-                            
-                                <input class="form-check-input" type="checkbox"  id="Plateaur" value="option1">
-                                <label for="Plateaur" class="form-check-label">Plateaux repas</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox"  id="lunchbox" value="option2">
-                                <label for="lunchbox" class="form-check-label">Lunchbox</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox"  id="boissons" value="option3">
-                                <label for="boissons" class="form-check-label">Boissons</label>
-                            </div>
-                    </div>
                     
-                    <button type="submit" class="btn btn-primary col">Submit</button>
+                    <button id="submit" type="submit" class="btn btn-primary col">Submit</button>
 
 
 
