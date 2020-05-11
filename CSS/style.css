@@ -6,7 +6,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.fullpage-col, .fullpage{
+.fullpage-col, .fullpage, #survey-form{
     margin: auto;
 }
 header{
@@ -19,7 +19,6 @@ header{
 }
 #survey-form{
     max-width: 600px;
-    margin: auto;
     margin-bottom: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
