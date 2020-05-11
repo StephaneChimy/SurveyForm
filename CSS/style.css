@@ -1,10 +1,12 @@
+
+
 .fullpage{
     background-image: url(../images/landpage.png);
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.fullpage-col{
+.fullpage-col, .fullpage{
     margin: auto;
 }
 header{
@@ -12,7 +14,8 @@ header{
     text-align: center;
     height: 150px;
     color: white;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);   
+    text-shadow: 0px 0px 3px black; 
+   
 }
 #survey-form{
     max-width: 600px;
